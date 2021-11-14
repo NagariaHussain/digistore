@@ -8,7 +8,9 @@
  "field_order": [
   "product",
   "plan",
-  "purchased_by"
+  "purchased_by",
+  "paid",
+  "payment_indent_id"
  ],
  "fields": [
   {
@@ -28,11 +30,22 @@
    "fieldtype": "Link",
    "label": "Purchased By",
    "options": "User"
+  },
+  {
+   "default": "0",
+   "fieldname": "paid",
+   "fieldtype": "Check",
+   "label": "Paid"
+  },
+  {
+   "fieldname": "payment_indent_id",
+   "fieldtype": "Data",
+   "label": "Payment Indent ID"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-14 13:07:25.820144",
+ "modified": "2021-11-14 20:03:14.411508",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "Store Purchase",
