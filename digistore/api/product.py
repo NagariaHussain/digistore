@@ -18,7 +18,7 @@ def buy(plan: str) -> str:
 	return create_checkout_session({"plan": plan})
 
 
-@frappe.whitlist()
+@frappe.whitelist()
 def get_data(product):
 	return ["1", "2", "3"]
 
