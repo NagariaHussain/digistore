@@ -7,6 +7,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "title",
   "product",
   "assets",
   "price",
@@ -37,11 +38,16 @@
    "fieldtype": "Select",
    "label": "Currency",
    "options": "INR\nUSD"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-14 13:10:23.604162",
+ "modified": "2021-11-14 16:17:10.886789",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "Plan",
@@ -63,6 +69,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "title_field": "price",
+ "title_field": "title",
  "track_changes": 1
 }
