@@ -1,5 +1,3 @@
-import UserProducts from '../views/UserProducts.vue';
-
 export default [
 	{
 		path: '/login',
@@ -10,10 +8,5 @@ export default [
 			isLoginPage: true,
 		},
 		props: true,
-	},
-	{
-		path: '/purchases',
-		name: 'Purchases',
-		component: UserProducts,
 	},
 ];
