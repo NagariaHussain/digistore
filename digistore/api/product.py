@@ -1,6 +1,6 @@
 import frappe
 
-from typing import List
+from typing import Dict, List
 
 
 @frappe.whitelist()
@@ -10,6 +10,11 @@ def all_products() -> List:
 		filters={"available": True},
 		fields=["name", "image", "title", "description", "category", "short_description"],
 	)
+
+
+@frappe.whitelist()
+def get(name: str) -> Dict:
+	return frappe.get_doc("Product", name)
 
 
 @frappe.whitelist()
