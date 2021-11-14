@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="mx-auto max-w-7xl">
 		<LoadingSpinner :loading="$resources.productData.loading" />
 		<div class="mt-8 px-4 prose" v-if="productData">
 			<h1>
@@ -7,7 +7,7 @@
 			</h1>
 			<p>{{ productData.product_doc.short_description }}</p>
 		</div>
-		<h2 class="mt-2 px-4 font-bold text-xl">Plans</h2>
+		<h2 class="mt-4 px-4 font-bold text-xl">Plans</h2>
 		<div class="max-w-7xl pb-24 sm:px-4">
 			<div
 				class="
