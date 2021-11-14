@@ -18,6 +18,11 @@ def buy(plan: str) -> str:
 	return create_checkout_session({"plan": plan})
 
 
+@frappe.whitlist()
+def get_data(product):
+	return ["1", "2", "3"]
+
+
 @frappe.whitelist()
 def get(name: str) -> Dict:
 	product_data = {}
