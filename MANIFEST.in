@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include digistore *.css
+recursive-include digistore *.csv
+recursive-include digistore *.html
+recursive-include digistore *.ico
+recursive-include digistore *.js
+recursive-include digistore *.json
+recursive-include digistore *.md
+recursive-include digistore *.png
+recursive-include digistore *.py
+recursive-include digistore *.svg
+recursive-include digistore *.txt
+recursive-exclude digistore *.pyc

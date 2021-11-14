@@ -1,0 +1,7 @@
+## Digistore
+
+OS
+
+#### License
+
+MIT
