@@ -10,7 +10,8 @@
   "title",
   "description",
   "available",
-  "image"
+  "image",
+  "category"
  ],
  "fields": [
   {
@@ -33,11 +34,16 @@
    "fieldname": "image",
    "fieldtype": "Attach Image",
    "label": "Image"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "label": "Category"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-14 14:52:25.227227",
+ "modified": "2021-11-14 14:58:40.248844",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "Product",
