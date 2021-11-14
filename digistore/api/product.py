@@ -6,7 +6,9 @@ from typing import List
 @frappe.whitelist()
 def all_products() -> List:
 	return frappe.db.get_all(
-		"Product", filters={"available": True}, fields=["image", "title", "description"]
+		"Product",
+		filters={"available": True},
+		fields=["image", "title", "description", "category"],
 	)
 
 
