@@ -19,21 +19,38 @@
 					<div class="hidden sm:block sm:ml-6">
 						<div class="flex space-x-4">
 							<!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-							<a
-								href="#"
-								class="
-									bg-gray-900
-									text-white
-									px-3
-									py-2
-									rounded-md
-									text-sm
-									font-medium
-								"
-								>Dashboard</a
+							<router-link to="/" v-slot="{ href, route, navigate, isActive }">
+								<a
+									:href="href"
+									:class="[
+										`px-3
+										py-2
+										rounded-md
+										text-sm
+										font-medium`,
+										isActive
+											? 'bg-gray-900 text-white'
+											: 'text-gray-300 hover:bg-gray-700 hover:text-white',
+									]"
+									>Dashboard</a
+								>
+							</router-link>
+							<router-link
+								to="/purchases"
+								v-slot="{ href, route, navigate, isActive }"
 							>
-							<router-link to="/purchases">
-								<a class="text-white px-3 py-2 rounded-md text-sm font-medium"
+								<a
+									:href="href"
+									:class="[
+										`px-3
+										py-2
+										rounded-md
+										text-sm
+										font-medium`,
+										isActive
+											? 'bg-gray-900 text-white'
+											: 'text-gray-300 hover:bg-gray-700 hover:text-white',
+									]"
 									>My Purchases</a
 								>
 							</router-link>
