@@ -11,7 +11,8 @@
   "description",
   "available",
   "image",
-  "category"
+  "category",
+  "short_description"
  ],
  "fields": [
   {
@@ -39,11 +40,16 @@
    "fieldname": "category",
    "fieldtype": "Data",
    "label": "Category"
+  },
+  {
+   "fieldname": "short_description",
+   "fieldtype": "Small Text",
+   "label": "Short Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-14 14:58:40.248844",
+ "modified": "2021-11-14 15:04:05.262062",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "Product",
