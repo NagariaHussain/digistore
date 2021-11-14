@@ -13,7 +13,7 @@ export default [
 		props: true,
 	},
 	{
-		path: 'success',
+		path: '/success',
 		name: 'Success',
 		component: () => import('../views/Success.vue'),
 	},
