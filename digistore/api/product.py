@@ -1,6 +1,7 @@
 import frappe
 
 from typing import Dict, List
+from digistore.api.billing import create_checkout_session
 
 
 @frappe.whitelist()
@@ -13,12 +14,17 @@ def all_products() -> List:
 
 
 @frappe.whitelist()
+def buy(plan: str) -> str:
+	return create_checkout_session({"plan": plan})
+
+
+@frappe.whitelist()
 def get(name: str) -> Dict:
 	product_data = {}
 
 	product_doc = frappe.get_doc("Product", name)
 	product_plans = frappe.get_all(
-		"Plan", filters={"product": name}, fields=["price", "currency", "title"]
+		"Plan", filters={"product": name}, fields=["name", "price", "currency", "title"]
 	)
 
 	product_data["product_doc"] = product_doc

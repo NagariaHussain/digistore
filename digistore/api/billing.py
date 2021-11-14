@@ -8,8 +8,7 @@ class InvalidStripeWebhookEvent(Exception):
 
 @frappe.whitelist()
 def create_checkout_session(data=None):
-	if data:
-		print(data)
+	plan = frappe.get_doc("Plan", data["plan"])
 
 	from digistore.utils.payments import get_stripe
 
@@ -21,19 +20,20 @@ def create_checkout_session(data=None):
 			{
 				"price_data": {
 					"currency": "usd",
-					"product_data": {"name": "E-book",},
-					"unit_amount": 2000,
+					"product_data": {"name": plan.title,},
+					"unit_amount": plan.price * 100,
 				},
 				"quantity": 1,
 			},
 		],
 		mode="payment",
-		success_url="https://hussain.codes/success",
-		cancel_url="https://hussain.codes/cancel",
+		success_url=(
+			"http://f22c-2409-4043-2011-55d5-2f09-3090-6459-c1da.ngrok.io/store/success"
+		),
+		cancel_url="http://f22c-2409-4043-2011-55d5-2f09-3090-6459-c1da.ngrok.io/store",
 	)
 
-	frappe.local.response["type"] = "redirect"
-	frappe.local.response["location"] = session.url
+	return session.url
 
 
 @frappe.whitelist(allow_guest=True)
@@ -57,6 +57,12 @@ def handle_stripe_webhook():
 				"event_type": event.type,
 			}
 		)
+
+		if event.type == "checkout.session.completed":
+			# frappe.get_doc({
+			# 	"doctype": "Store Purchase"
+			# })
+			print("Create store payment")
 	except Exception:
 		frappe.db.rollback()
 		frappe.log_error(title="Stripe Webhook Handler")

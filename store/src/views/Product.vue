@@ -38,8 +38,9 @@
 								>${{ tier.price }}</span
 							>
 						</p>
-						<a
-							:href="`#`"
+
+						<button
+							@click="$resources.buyProduct.submit({ plan: tier.name })"
 							class="
 								mt-8
 								block
@@ -53,8 +54,9 @@
 								text-white text-center
 								hover:bg-gray-900
 							"
-							>Buy {{ tier.title }}</a
 						>
+							Buy {{ tier.title }}
+						</button>
 					</div>
 					<div class="pt-6 pb-8 px-6">
 						<h3
@@ -100,6 +102,14 @@ export default {
 				auto: true,
 				onSuccess(d) {
 					console.log(d);
+				},
+			};
+		},
+		buyProduct() {
+			return {
+				method: 'digistore.api.product.buy',
+				onSuccess(paymentLink) {
+					location.href = paymentLink;
 				},
 			};
 		},

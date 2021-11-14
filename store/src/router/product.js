@@ -12,4 +12,9 @@ export default [
 		component: () => import('../views/Product.vue'),
 		props: true,
 	},
+	{
+		path: 'success',
+		name: 'Success',
+		component: () => import('../views/Success.vue'),
+	},
 ];
