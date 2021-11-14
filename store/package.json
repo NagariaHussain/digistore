@@ -1,0 +1,22 @@
+{
+  "name": "store",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/assets/digistore/store/ && yarn copy-html-entry",
+    "serve": "vite preview",
+    "copy-html-entry": "cp ../digistore/public/store/index.html ../digistore/www/store.html"
+  },
+  "dependencies": {
+    "socket.io-client": "^2.4.0",
+    "vue": "^3.2.16",
+    "vue-router": "^4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19",
+    "vite": "^2.6.4"
+  }
+}

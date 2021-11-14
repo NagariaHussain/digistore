@@ -182,3 +182,5 @@ app_license = "MIT"
 # 	"digistore.auth.validate"
 # ]
 
+
+website_route_rules = [{'from_route': '/store/<path:app_path>', 'to_route': 'store'},]
