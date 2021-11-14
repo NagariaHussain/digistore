@@ -6,4 +6,10 @@ export default [
 		name: 'Purchases',
 		component: UserProducts,
 	},
+	{
+		path: '/products/:productName',
+		name: 'Product',
+		component: () => import('../views/Product.vue'),
+		props: true,
+	},
 ];
