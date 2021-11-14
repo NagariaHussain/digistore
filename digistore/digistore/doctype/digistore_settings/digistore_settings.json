@@ -1,0 +1,77 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-11-14 12:19:38.124715",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "stripe_settings_section",
+  "publishable_key",
+  "secret_key",
+  "aws_s3_settings_section",
+  "bucket_name",
+  "access_key_id",
+  "secret_access_key"
+ ],
+ "fields": [
+  {
+   "fieldname": "stripe_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Stripe Settings"
+  },
+  {
+   "fieldname": "aws_s3_settings_section",
+   "fieldtype": "Section Break",
+   "label": "AWS S3 Settings"
+  },
+  {
+   "fieldname": "publishable_key",
+   "fieldtype": "Data",
+   "label": "Publishable Key"
+  },
+  {
+   "fieldname": "secret_key",
+   "fieldtype": "Password",
+   "label": "Secret Key"
+  },
+  {
+   "fieldname": "bucket_name",
+   "fieldtype": "Data",
+   "label": "Bucket Name"
+  },
+  {
+   "fieldname": "access_key_id",
+   "fieldtype": "Data",
+   "label": "Access Key ID"
+  },
+  {
+   "fieldname": "secret_access_key",
+   "fieldtype": "Password",
+   "label": "Secret Access Key"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2021-11-14 12:21:53.380594",
+ "modified_by": "Administrator",
+ "module": "Digistore",
+ "name": "DigiStore Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
