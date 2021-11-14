@@ -1,5 +1,6 @@
 import frappe
 from digistore.utils.payments import get_stripe
+import math
 
 
 class InvalidStripeWebhookEvent(Exception):
@@ -21,7 +22,7 @@ def create_checkout_session(data=None):
 				"price_data": {
 					"currency": "usd",
 					"product_data": {"name": plan.title,},
-					"unit_amount": plan.price * 100,
+					"unit_amount": math.floor(plan.price * 100),
 				},
 				"quantity": 1,
 			},

@@ -39,7 +39,9 @@
 							>
 						</p>
 
+						<LoadingSpinner :loading="$resources.buyProduct.loading" />
 						<button
+							v-if="!$resources.buyProduct.loading"
 							@click="$resources.buyProduct.submit({ plan: tier.name })"
 							class="
 								mt-8
