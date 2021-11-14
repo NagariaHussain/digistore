@@ -8,7 +8,8 @@
  "field_order": [
   "product",
   "assets",
-  "price"
+  "price",
+  "currency"
  ],
  "fields": [
   {
@@ -27,11 +28,17 @@
    "fieldname": "price",
    "fieldtype": "Currency",
    "label": "Price"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Select",
+   "label": "Currency",
+   "options": "INR\nUSD"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-14 12:18:33.825559",
+ "modified": "2021-11-14 13:04:59.174217",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "Plan",

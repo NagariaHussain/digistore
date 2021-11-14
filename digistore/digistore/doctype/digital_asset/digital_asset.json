@@ -21,6 +21,7 @@
   {
    "fieldname": "s3_url",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "S3 URL"
   },
   {
@@ -31,7 +32,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-14 12:59:24.758369",
+ "modified": "2021-11-14 13:02:54.480739",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "Digital Asset",
