@@ -8,6 +8,8 @@
     "copy-html-entry": "cp ../digistore/public/store/index.html ../digistore/www/store.html"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.4.2",
+    "@heroicons/vue": "^1.0.5",
     "socket.io-client": "^2.4.0",
     "vue": "^3.2.16",
     "vue-router": "^4"
