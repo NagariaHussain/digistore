@@ -10,7 +10,8 @@ class DigiStoreSettings(Document):
 	@frappe.whitelist()
 	def create_stripe_webhook(self):
 		stripe = get_stripe()
-		url = frappe.utils.get_url("/api/method/digistore.api.billing.handle_stripe_webhook")
+		# HARDCODED FOR TESTING
+		url = "https://hussain.codes/api/method/digistore.api.billing.handle_stripe_webhook"
 		webhook = stripe.WebhookEndpoint.create(
 			url=url,
 			enabled_events=[
