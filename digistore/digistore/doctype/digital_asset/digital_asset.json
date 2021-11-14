@@ -7,8 +7,8 @@
  "engine": "InnoDB",
  "field_order": [
   "type",
-  "s3_url",
-  "description"
+  "description",
+  "file"
  ],
  "fields": [
   {
@@ -16,23 +16,23 @@
    "fieldname": "type",
    "fieldtype": "Select",
    "label": "Type",
-   "options": "e-Book / PDF\nAudio\nVideo\nOther"
-  },
-  {
-   "fieldname": "s3_url",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "S3 URL"
+   "options": "Art / Image\ne-Book / PDF\nAudio\nVideo\nOther"
   },
   {
    "fieldname": "description",
    "fieldtype": "Data",
    "label": "Description"
+  },
+  {
+   "fieldname": "file",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "File"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-14 13:02:54.480739",
+ "modified": "2021-11-14 20:45:21.461787",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "Digital Asset",
