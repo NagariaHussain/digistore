@@ -65,7 +65,7 @@ def handle_stripe_webhook():
 
 
 def parse_payload(payload, signature):
-	secret = frappe.db.get_single_value("Press Settings", "stripe_webhook_secret")
+	secret = frappe.db.get_single_value("DigiStore Settings", "stripe_webhook_secret")
 	stripe = get_stripe()
 	try:
 		return stripe.Webhook.construct_event(payload, signature, secret)
