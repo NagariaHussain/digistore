@@ -1,4 +1,15 @@
 <template>
-	<h1>Home Page</h1>
-	<button>Ping</button>
+	<div>
+		<ProductsList />
+	</div>
 </template>
+
+<script>
+import ProductsList from './ProductsList.vue';
+
+export default {
+	components: {
+		ProductsList,
+	},
+};
+</script>
