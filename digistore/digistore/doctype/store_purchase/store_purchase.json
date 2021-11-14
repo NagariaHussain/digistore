@@ -1,41 +1,41 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:PROD-{#####}",
- "creation": "2021-11-14 12:14:13.499304",
+ "creation": "2021-11-14 13:07:25.820144",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "title",
-  "description",
-  "available"
+  "product",
+  "plan",
+  "purchased_by"
  ],
  "fields": [
   {
-   "fieldname": "title",
-   "fieldtype": "Data",
-   "label": "Title"
+   "fieldname": "product",
+   "fieldtype": "Link",
+   "label": "Product",
+   "options": "Product"
   },
   {
-   "fieldname": "description",
-   "fieldtype": "Markdown Editor",
-   "label": "Description"
+   "fieldname": "plan",
+   "fieldtype": "Link",
+   "label": "Plan",
+   "options": "Plan"
   },
   {
-   "default": "0",
-   "fieldname": "available",
-   "fieldtype": "Check",
-   "label": "Available"
+   "fieldname": "purchased_by",
+   "fieldtype": "Link",
+   "label": "Purchased By",
+   "options": "User"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-14 13:08:31.177450",
+ "modified": "2021-11-14 13:07:25.820144",
  "modified_by": "Administrator",
  "module": "Digistore",
- "name": "Product",
- "naming_rule": "Expression",
+ "name": "Store Purchase",
  "owner": "Administrator",
  "permissions": [
   {
@@ -53,6 +53,5 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "title_field": "title",
  "track_changes": 1
 }
