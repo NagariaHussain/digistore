@@ -46,7 +46,9 @@ def purchased(user: str = None) -> List:
 		user = frappe.session.user
 
 	user_purchases = frappe.get_all(
-		"Store Purchase", filters={"purchased_by": user}, fields=["product", "plan"]
+		"Store Purchase",
+		filters={"purchased_by": user, "paid": True},
+		fields=["product", "plan"],
 	)
 
 	for purchase in user_purchases:

@@ -34,6 +34,16 @@ def create_checkout_session(data=None):
 		cancel_url="http://f22c-2409-4043-2011-55d5-2f09-3090-6459-c1da.ngrok.io/store",
 	)
 
+	frappe.get_doc(
+		{
+			"doctype": "Store Purchase",
+			"plan": plan.name,
+			"product": plan.product,
+			"purchased_by": frappe.session.user,
+			"payment_indent_id": session.payment_intent,
+		}
+	).insert(ignore_permissions=True)
+
 	return session.url
 
 
@@ -54,16 +64,17 @@ def handle_stripe_webhook():
 			{
 				"doctype": "Stripe Webhook Log",
 				"name": event.id,
-				"payload": frappe.as_json(form_dict),
+				"payload": form_dict,
 				"event_type": event.type,
 			}
 		)
 
 		if event.type == "checkout.session.completed":
-			# frappe.get_doc({
-			# 	"doctype": "Store Purchase"
-			# })
-			print("Create store payment")
+			sp_doc = frappe.get_doc(
+				"Store Purchase", {"payment_indent_id": form_dict["payment_intent"]}
+			)
+			sp_doc.paid = True
+			sp_doc.save()
 	except Exception:
 		frappe.db.rollback()
 		frappe.log_error(title="Stripe Webhook Handler")
