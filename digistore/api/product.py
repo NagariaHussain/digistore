@@ -14,7 +14,17 @@ def all_products() -> List:
 
 @frappe.whitelist()
 def get(name: str) -> Dict:
-	return frappe.get_doc("Product", name)
+	product_data = {}
+
+	product_doc = frappe.get_doc("Product", name)
+	product_plans = frappe.get_all(
+		"Plan", filters={"product": name}, fields=["assets", "price", "currency"]
+	)
+
+	product_data["product_doc"] = product_doc
+	product_data["product_plans"] = product_plans
+
+	return product_data
 
 
 @frappe.whitelist()
