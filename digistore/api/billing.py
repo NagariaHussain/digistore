@@ -60,6 +60,7 @@ def handle_stripe_webhook():
 		# set user to Administrator, to not have to do ignore_permissions everywhere
 		frappe.set_user("Administrator")
 
+		# Debugging purposes
 		print(
 			{
 				"doctype": "Stripe Webhook Log",

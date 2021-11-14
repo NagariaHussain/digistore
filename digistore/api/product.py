@@ -19,8 +19,19 @@ def buy(plan: str) -> str:
 
 
 @frappe.whitelist()
-def get_data(product):
-	return ["1", "2", "3"]
+def get_data(product: str) -> Dict:
+	try:
+		# TODO: Refactor to use get_value
+		sp = frappe.get_doc(
+			"Store Purchase", {"purchased_by": frappe.session.user, "product": product}
+		)
+	except:
+		frappe.throw("Make sure you have purchased the product.")
+
+	asset_names = frappe.get_all("Plan Assets", filters={"parent": sp.plan}, pluck="asset")
+	assets = [frappe.get_doc("Digital Asset", a) for a in asset_names]
+
+	return assets
 
 
 @frappe.whitelist()

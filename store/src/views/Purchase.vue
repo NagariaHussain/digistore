@@ -4,7 +4,7 @@
 		<div>Product ID: {{ productName }}</div>
 		<ul v-for="d in $resources.getData.data" :key="d">
 			Link:
-			<a>d</a>
+			<a>{{ d }}</a>
 		</ul>
 	</div>
 </template>
@@ -22,7 +22,7 @@ export default {
 				params: {
 					product: this.productName,
 				},
-				// auto: true,
+				auto: true,
 			};
 		},
 	},
