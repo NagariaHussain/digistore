@@ -8,7 +8,7 @@ def all_products() -> List:
 	return frappe.db.get_all(
 		"Product",
 		filters={"available": True},
-		fields=["image", "title", "description", "category"],
+		fields=["name", "image", "title", "description", "category"],
 	)
 
 
