@@ -22,6 +22,10 @@ class DigiStoreSettings(Document):
 				"invoice.payment_succeeded",
 				"invoice.payment_failed",
 				"invoice.finalized",
+				"checkout.session.completed",
+				"checkout.session.async_payment_failed",
+				"checkout.session.async_payment_succeeded",
+				"checkout.session.expired",
 			],
 		)
 		self.stripe_webhook_endpoint_id = webhook["id"]
