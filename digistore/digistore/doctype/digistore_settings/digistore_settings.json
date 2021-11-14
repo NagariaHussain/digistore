@@ -7,12 +7,18 @@
  "engine": "InnoDB",
  "field_order": [
   "stripe_settings_section",
-  "publishable_key",
-  "secret_key",
+  "stripe_account",
+  "create_stripe_plans",
+  "stripe_product_id",
+  "stripe_inr_plan_id",
+  "stripe_usd_plan_id",
+  "create_stripe_webhook",
+  "stripe_webhook_endpoint_id",
+  "stripe_webhook_secret",
   "aws_s3_settings_section",
-  "bucket_name",
+  "secret_access_key",
   "access_key_id",
-  "secret_access_key"
+  "bucket_name"
  ],
  "fields": [
   {
@@ -24,16 +30,6 @@
    "fieldname": "aws_s3_settings_section",
    "fieldtype": "Section Break",
    "label": "AWS S3 Settings"
-  },
-  {
-   "fieldname": "publishable_key",
-   "fieldtype": "Data",
-   "label": "Publishable Key"
-  },
-  {
-   "fieldname": "secret_key",
-   "fieldtype": "Password",
-   "label": "Secret Key"
   },
   {
    "fieldname": "bucket_name",
@@ -49,12 +45,53 @@
    "fieldname": "secret_access_key",
    "fieldtype": "Password",
    "label": "Secret Access Key"
+  },
+  {
+   "fieldname": "stripe_account",
+   "fieldtype": "Link",
+   "label": "Stripe Account",
+   "options": "Stripe Settings"
+  },
+  {
+   "fieldname": "create_stripe_plans",
+   "fieldtype": "Button",
+   "label": "Create Stripe Plans"
+  },
+  {
+   "fieldname": "stripe_product_id",
+   "fieldtype": "Data",
+   "label": "Stripe Product ID"
+  },
+  {
+   "fieldname": "stripe_inr_plan_id",
+   "fieldtype": "Data",
+   "label": "Stripe INR Plan ID"
+  },
+  {
+   "fieldname": "stripe_usd_plan_id",
+   "fieldtype": "Data",
+   "label": "Stripe USD Plan ID"
+  },
+  {
+   "fieldname": "create_stripe_webhook",
+   "fieldtype": "Button",
+   "label": "Create Stripe Webhook"
+  },
+  {
+   "fieldname": "stripe_webhook_endpoint_id",
+   "fieldtype": "Data",
+   "label": "Stripe Webhook Endpoint ID"
+  },
+  {
+   "fieldname": "stripe_webhook_secret",
+   "fieldtype": "Data",
+   "label": "Stripe Webhook Secret"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2021-11-14 12:21:53.380594",
+ "modified": "2021-11-14 17:09:17.413698",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "DigiStore Settings",
