@@ -71,7 +71,7 @@ def handle_stripe_webhook():
 
 		if event.type == "checkout.session.completed":
 			sp_doc = frappe.get_doc(
-				"Store Purchase", {"payment_indent_id": form_dict["payment_intent"]}
+				"Store Purchase", {"payment_indent_id": form_dict["payload"]["payment_intent"]}
 			)
 			sp_doc.paid = True
 			sp_doc.save()
