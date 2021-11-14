@@ -4,8 +4,18 @@ from typing import List
 
 
 @frappe.whitelist()
-def purchased(user: str) -> List:
+def all_products() -> List:
+	return frappe.db.get_all(
+		"Product", filters={"available": True}, fields=["image", "title", "description"]
+	)
+
+
+@frappe.whitelist()
+def purchased(user: str = None) -> List:
 	user_products = []
+
+	if not user:
+		user = frappe.session.user
 
 	user_purchases = frappe.get_all(
 		"Store Purchase", filters={"purchased_by": user}, fields=["product", "plan"]
