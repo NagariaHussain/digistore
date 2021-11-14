@@ -7,7 +7,8 @@
  "engine": "InnoDB",
  "field_order": [
   "type",
-  "s3_url"
+  "s3_url",
+  "description"
  ],
  "fields": [
   {
@@ -21,11 +22,16 @@
    "fieldname": "s3_url",
    "fieldtype": "Data",
    "label": "S3 URL"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-14 12:11:58.543187",
+ "modified": "2021-11-14 12:59:24.758369",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "Digital Asset",
