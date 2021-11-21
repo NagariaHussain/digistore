@@ -17,8 +17,7 @@ FOSS Digital Assets Marketplace. Distribute digital assets, like a pro.
 ## Installation
 
 1. Install Frappe Bench
-2. Install app: [doppio](https://github.com/NagariaHussain/doppio)
-3. Create a new site:
+1. Create a new site:
 
 ```bash
 $ bench new-site <your-site>
