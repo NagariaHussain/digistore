@@ -4,3 +4,4 @@
 *.swp
 tags
 digistore/docs/current
+node_modules/

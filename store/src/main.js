@@ -3,7 +3,7 @@ import { createApp, reactive } from 'vue';
 import App from './App.vue';
 
 import router from './router';
-import resourceManager from '../../../doppio/vision/src/resourceManager';
+import resourceManager from './resourceManager';
 import call from './controllers/call';
 import socket from './controllers/socket';
 import Auth from './controllers/auth';
