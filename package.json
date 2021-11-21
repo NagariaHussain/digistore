@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cd store && yarn dev",
-    "build": "cd store && yarn build"
+    "build": "cd store && yarn build",
+    "postinstall": "cd store && yarn install"
   },
   "repository": {
     "type": "git",
