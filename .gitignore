@@ -5,3 +5,5 @@
 tags
 digistore/docs/current
 node_modules/
+digistore/public/store
+digistore/www/store.html
