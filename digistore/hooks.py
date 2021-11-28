@@ -3,7 +3,7 @@ from . import __version__ as app_version
 app_name = "digistore"
 app_title = "Digistore"
 app_publisher = "Mohammad Hussain Nagaria"
-app_description = "FOSS Platfrom for Digital Asset deistribution"
+app_description = "FOSS Platfrom for Digital Asset distribution"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "hussain@frappe.io"
