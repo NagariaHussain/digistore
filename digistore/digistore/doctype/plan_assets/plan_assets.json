@@ -12,14 +12,16 @@
   {
    "fieldname": "asset",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Asset",
-   "options": "Digital Asset"
+   "options": "Digital Asset",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2021-11-28 13:56:16.818259",
+ "modified": "2021-11-28 14:28:27.876539",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "Plan Assets",
