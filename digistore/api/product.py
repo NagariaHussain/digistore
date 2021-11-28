@@ -38,7 +38,7 @@ def get_data(product: str) -> Dict:
 def get(name: str) -> Dict:
 	product_data = {}
 
-	product_doc = frappe.get_doc("Product", name)
+	product_doc = frappe.get_doc("Digital Product", name)
 	product_plans = frappe.get_all(
 		"Plan", filters={"product": name}, fields=["name", "price", "currency", "title"]
 	)
