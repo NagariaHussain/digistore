@@ -38,8 +38,9 @@
   },
   {
    "fieldname": "category",
-   "fieldtype": "Data",
-   "label": "Category"
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Digital Product Category"
   },
   {
    "fieldname": "short_description",
@@ -49,10 +50,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-14 15:04:05.262062",
+ "modified": "2021-11-28 13:36:18.833590",
  "modified_by": "Administrator",
  "module": "Digistore",
- "name": "Product",
+ "name": "Digital Product",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

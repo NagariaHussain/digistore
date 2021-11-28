@@ -7,7 +7,7 @@ from digistore.api.billing import create_checkout_session
 @frappe.whitelist()
 def all_products() -> List:
 	return frappe.db.get_all(
-		"Product",
+		"Digital Product",
 		filters={"available": True},
 		fields=["name", "image", "title", "description", "category", "short_description"],
 	)
@@ -63,7 +63,7 @@ def purchased(user: str = None) -> List:
 	)
 
 	for purchase in user_purchases:
-		product = frappe.get_doc("Product", purchase.product)
+		product = frappe.get_doc("Digital Product", purchase.product)
 		plan = frappe.get_doc("Plan", purchase.plan)
 
 		user_products.append({"product": product, "plan": plan})

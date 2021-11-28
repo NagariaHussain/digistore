@@ -19,7 +19,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Product",
-   "options": "Product"
+   "options": "Digital Product"
   },
   {
    "fieldname": "assets",
@@ -47,7 +47,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-14 16:17:10.886789",
+ "modified": "2021-11-28 13:39:40.868888",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "Plan",

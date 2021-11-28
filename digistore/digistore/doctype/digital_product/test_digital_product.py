@@ -4,5 +4,5 @@
 # import frappe
 import unittest
 
-class TestProduct(unittest.TestCase):
+class TestDigitalProduct(unittest.TestCase):
 	pass

@@ -17,7 +17,7 @@
    "fieldname": "product",
    "fieldtype": "Link",
    "label": "Product",
-   "options": "Product"
+   "options": "Digital Product"
   },
   {
    "fieldname": "plan",
@@ -45,7 +45,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-14 20:03:14.411508",
+ "modified": "2021-11-28 13:40:00.389168",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "Store Purchase",
