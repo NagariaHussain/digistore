@@ -2,11 +2,11 @@ from . import __version__ as app_version
 
 app_name = "digistore"
 app_title = "Digistore"
-app_publisher = "OS"
-app_description = "OS"
+app_publisher = "Mohammad Hussain Nagaria"
+app_description = "FOSS Platfrom for Digital Asset deistribution"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
-app_email = "hOSussain@frappe.io"
+app_email = "hussain@frappe.io"
 app_license = "MIT"
 
 # Includes in <head>
