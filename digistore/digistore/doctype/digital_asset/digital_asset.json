@@ -15,8 +15,11 @@
    "default": "e-Book / PDF",
    "fieldname": "type",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Type",
-   "options": "Art / Image\ne-Book / PDF\nAudio\nVideo\nOther"
+   "options": "Art / Image\ne-Book / PDF\nAudio\nVideo\nOther",
+   "reqd": 1
   },
   {
    "fieldname": "description",
@@ -32,7 +35,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-14 20:45:21.461787",
+ "modified": "2021-11-28 13:55:45.551389",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "Digital Asset",
