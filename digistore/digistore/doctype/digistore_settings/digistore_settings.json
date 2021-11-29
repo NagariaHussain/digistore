@@ -8,17 +8,16 @@
  "field_order": [
   "stripe_settings_section",
   "stripe_account",
-  "create_stripe_plans",
-  "stripe_product_id",
-  "stripe_inr_plan_id",
-  "stripe_usd_plan_id",
   "create_stripe_webhook",
+  "column_break_3",
   "stripe_webhook_endpoint_id",
   "stripe_webhook_secret",
   "aws_s3_settings_section",
   "secret_access_key",
   "access_key_id",
-  "bucket_name"
+  "column_break_10",
+  "bucket_name",
+  "region"
  ],
  "fields": [
   {
@@ -53,26 +52,6 @@
    "options": "Stripe Settings"
   },
   {
-   "fieldname": "create_stripe_plans",
-   "fieldtype": "Button",
-   "label": "Create Stripe Plans"
-  },
-  {
-   "fieldname": "stripe_product_id",
-   "fieldtype": "Data",
-   "label": "Stripe Product ID"
-  },
-  {
-   "fieldname": "stripe_inr_plan_id",
-   "fieldtype": "Data",
-   "label": "Stripe INR Plan ID"
-  },
-  {
-   "fieldname": "stripe_usd_plan_id",
-   "fieldtype": "Data",
-   "label": "Stripe USD Plan ID"
-  },
-  {
    "fieldname": "create_stripe_webhook",
    "fieldtype": "Button",
    "label": "Create Stripe Webhook"
@@ -86,12 +65,25 @@
    "fieldname": "stripe_webhook_secret",
    "fieldtype": "Data",
    "label": "Stripe Webhook Secret"
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Data",
+   "label": "Region"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2021-11-14 17:09:17.413698",
+ "modified": "2021-11-30 00:03:14.822952",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "DigiStore Settings",
