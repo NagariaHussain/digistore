@@ -8,7 +8,10 @@
  "field_order": [
   "type",
   "description",
-  "file"
+  "file",
+  "column_break_4",
+  "get_from_s3",
+  "s3_file_url"
  ],
  "fields": [
   {
@@ -30,12 +33,29 @@
    "fieldname": "file",
    "fieldtype": "Attach",
    "in_list_view": 1,
-   "label": "File"
+   "label": "File",
+   "reqd": 1
+  },
+  {
+   "fieldname": "s3_file_url",
+   "fieldtype": "Attach",
+   "label": "S3 File Url",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:Boolean(cur_frm.doc.s3_file_url)",
+   "fieldname": "get_from_s3",
+   "fieldtype": "Button",
+   "label": "Get From S3"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-11-28 13:55:45.551389",
+ "modified": "2021-11-30 22:19:48.035295",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "Digital Asset",

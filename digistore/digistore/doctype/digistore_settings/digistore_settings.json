@@ -15,9 +15,10 @@
   "aws_s3_settings_section",
   "secret_access_key",
   "access_key_id",
+  "region",
   "column_break_10",
   "bucket_name",
-  "region"
+  "presigned_url_expiry"
  ],
  "fields": [
   {
@@ -78,12 +79,18 @@
   {
    "fieldname": "column_break_10",
    "fieldtype": "Column Break"
+  },
+  {
+   "default": "3600",
+   "fieldname": "presigned_url_expiry",
+   "fieldtype": "Int",
+   "label": "Presigned URL Expiry"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2021-11-30 00:03:14.822952",
+ "modified": "2021-11-30 22:28:10.841537",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "DigiStore Settings",
