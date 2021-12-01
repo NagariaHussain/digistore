@@ -3,7 +3,7 @@
 
 frappe.ui.form.on("Digital Asset", {
   refresh: function (frm) {
-    if (!frm.doc.s3_file_url) {
+    if (!frm.doc.s3_file_url && frm.doc.file) {
       let btn = frm.add_custom_button(
         "Upload File to S3",
         () => {
@@ -22,8 +22,8 @@ frappe.ui.form.on("Digital Asset", {
                   btn,
                 })
                 .then((r) => {
+                  frappe.msgprint("Upload Complete.");
                   frm.refresh();
-                  frappe.msgprint("Upload Complete.", (indicator = "green"));
                 });
             }
           );
