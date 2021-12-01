@@ -44,7 +44,7 @@ app_license = "MIT"
 
 # website user home page (by Role)
 # role_home_page = {
-#	"Role": "home_page"
+# 	"Role": "home_page"
 # }
 
 # Generators
@@ -103,8 +103,15 @@ app_license = "MIT"
 # 		"on_update": "method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
-#	}
+# 	}
 # }
+
+
+doc_events = {
+	"Digital Asset": {
+		"after_insert": "digistore.utils.asset_storage.upload_digital_asset_to_s3_hook",
+	}
+}
 
 # Scheduled Tasks
 # ---------------
@@ -183,4 +190,6 @@ app_license = "MIT"
 # ]
 
 
-website_route_rules = [{'from_route': '/store/<path:app_path>', 'to_route': 'store'},]
+website_route_rules = [
+	{"from_route": "/store/<path:app_path>", "to_route": "store"},
+]

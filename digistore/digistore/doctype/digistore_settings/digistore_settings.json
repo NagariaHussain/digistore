@@ -18,7 +18,8 @@
   "region",
   "column_break_10",
   "bucket_name",
-  "presigned_url_expiry"
+  "presigned_url_expiry",
+  "upload_all_digital_assets_to_s3"
  ],
  "fields": [
   {
@@ -85,12 +86,18 @@
    "fieldname": "presigned_url_expiry",
    "fieldtype": "Int",
    "label": "Presigned URL Expiry"
+  },
+  {
+   "default": "0",
+   "fieldname": "upload_all_digital_assets_to_s3",
+   "fieldtype": "Check",
+   "label": "Upload All Digital Assets to S3"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2021-11-30 22:28:10.841537",
+ "modified": "2021-12-01 11:37:16.338707",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "DigiStore Settings",
