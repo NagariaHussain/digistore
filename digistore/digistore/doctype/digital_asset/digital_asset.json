@@ -40,6 +40,7 @@
    "fieldname": "s3_file_url",
    "fieldtype": "Attach",
    "label": "S3 File Url",
+   "no_copy": 1,
    "read_only": 1
   },
   {
@@ -56,7 +57,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-01 12:25:25.949989",
+ "modified": "2021-12-01 13:40:17.561791",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "Digital Asset",

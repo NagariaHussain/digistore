@@ -50,6 +50,16 @@ def upload_digital_asset_to_s3(doc, method=None):
 	)
 
 	doc.db_set("s3_file_url", file_url)
+
+	if frappe.db.get_single_value(
+		"DigiStore Settings", "remove_local_asset_files_after_s3_upload"
+	):
+		file.delete()
+		doc.file = ""
+
+	doc.save()
+	doc.reload()
+
 	frappe.db.commit()
 
 

@@ -19,7 +19,8 @@
   "column_break_10",
   "bucket_name",
   "presigned_url_expiry",
-  "upload_all_digital_assets_to_s3"
+  "upload_all_digital_assets_to_s3",
+  "remove_local_asset_files_after_s3_upload"
  ],
  "fields": [
   {
@@ -92,12 +93,18 @@
    "fieldname": "upload_all_digital_assets_to_s3",
    "fieldtype": "Check",
    "label": "Upload All Digital Assets to S3"
+  },
+  {
+   "default": "0",
+   "fieldname": "remove_local_asset_files_after_s3_upload",
+   "fieldtype": "Check",
+   "label": "Remove Local Asset Files After S3 Upload"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2021-12-01 11:37:16.338707",
+ "modified": "2021-12-01 13:33:13.493482",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "DigiStore Settings",
