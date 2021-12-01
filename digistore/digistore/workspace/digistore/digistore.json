@@ -1,0 +1,42 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"DigiStore\\n\\t\\t\\t\\n\\t\\t\\n\\t\\t\\t\\n\\t\\t\\n\\t\\t\\t\\n\\t\\t\",\"level\":4,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Digital Assets\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Digital Products\",\"col\":4}}]",
+ "creation": "2021-12-01 18:24:19.602841",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "attachment",
+ "idx": 0,
+ "label": "DigiStore",
+ "links": [],
+ "modified": "2021-12-01 18:29:27.953171",
+ "modified_by": "Administrator",
+ "module": "Digistore",
+ "name": "DigiStore",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "roles": [],
+ "sequence_id": 1,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "format": "{}",
+   "label": "Digital Assets",
+   "link_to": "Digital Asset",
+   "stats_filter": "{\"file\":[\"is\",\"set\"]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "format": "{} Available",
+   "label": "Digital Products",
+   "link_to": "Digital Product",
+   "stats_filter": "{\"available\":[\"=\",1]}",
+   "type": "DocType"
+  }
+ ],
+ "title": "DigiStore"
+}
