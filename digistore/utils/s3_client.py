@@ -102,9 +102,6 @@ class S3Client:
 			print(e)
 
 		if not doc_path:
-			print(type(year), type(month), type(day))
-			print(parent_doctype, file_name, key)
-
 			final_key = (
 				year + "/" + month + "/" + day + "/" + parent_doctype + "/" + key + "_" + file_name
 			)
