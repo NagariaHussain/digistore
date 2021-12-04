@@ -55,12 +55,12 @@
 											aria-hidden="true"
 										/>
 										<span class="ml-2 flex-1 w-0 truncate">
-											{{ asset.file }}
+											{{ asset.description || asset.file }}
 										</span>
 									</div>
 									<div class="ml-4 flex-shrink-0">
 										<a
-											:href="asset.file"
+											:href="asset.s3_file_url || asset.file"
 											target="_blank"
 											class="font-medium text-indigo-600 hover:text-indigo-500"
 										>
@@ -92,9 +92,6 @@ export default {
 					product: this.productName,
 				},
 				auto: true,
-				onSuccess(d) {
-					console.log('Assets', d);
-				},
 			};
 		},
 	},

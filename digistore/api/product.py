@@ -29,7 +29,12 @@ def get_data(product: str) -> Dict:
 		frappe.throw("Make sure you have purchased the product.")
 
 	asset_names = frappe.get_all("Plan Assets", filters={"parent": sp.plan}, pluck="asset")
-	assets = [frappe.get_doc("Digital Asset", a) for a in asset_names]
+
+	assets = frappe.get_all(
+		"Digital Asset",
+		filters={"name": ("in", asset_names)},
+		fields=["s3_file_url", "file", "description", "type"],
+	)
 
 	return assets
 
