@@ -47,7 +47,7 @@
 							</p>
 						</div>
 						<div>
-							<router-link :to="`/purchase/${p.product.name}`" v-slot="{ href }">
+							<router-link :to="`/purchase/${p.name}`" v-slot="{ href }">
 								<a
 									:href="href"
 									class="

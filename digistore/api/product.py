@@ -19,13 +19,12 @@ def buy(plan: str) -> str:
 
 
 @frappe.whitelist()
-def get_data(product: str) -> Dict:
-	try:
-		# TODO: Refactor to use get_value
-		sp = frappe.get_doc(
-			"Store Purchase", {"purchased_by": frappe.session.user, "product": product}
-		)
-	except:
+def get_data(purchase: str) -> Dict:
+	sp = frappe.db.get_value(
+		"Store Purchase", purchase, ["purchased_by", "plan"], as_dict=True
+	)
+
+	if frappe.session.user != sp.purchased_by:
 		frappe.throw("Make sure you have purchased the product.")
 
 	asset_names = frappe.get_all("Plan Assets", filters={"parent": sp.plan}, pluck="asset")
@@ -51,6 +50,9 @@ def get(name: str) -> Dict:
 	product_data["product_doc"] = product_doc
 	product_data["product_plans"] = product_plans
 
+	has_user_purchased = product_doc.is_purchased_by_user(frappe.session.user)
+	product_data["has_user_purchased"] = has_user_purchased
+
 	return product_data
 
 
@@ -64,13 +66,15 @@ def purchased(user: str = None) -> List:
 	user_purchases = frappe.get_all(
 		"Store Purchase",
 		filters={"purchased_by": user, "paid": True},
-		fields=["product", "plan"],
+		fields=["name", "product", "plan"],
 	)
 
 	for purchase in user_purchases:
 		product = frappe.get_doc("Digital Product", purchase.product)
 		plan = frappe.get_doc("Plan", purchase.plan)
 
-		user_products.append({"product": product, "plan": plan})
+		user_products.append(
+			{"name": purchase.name, "product": product, "plan": plan,}
+		)
 
 	return user_products

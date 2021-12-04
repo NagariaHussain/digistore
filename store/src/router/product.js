@@ -18,7 +18,7 @@ export default [
 		component: () => import('../views/Success.vue'),
 	},
 	{
-		path: '/purchase/:productName',
+		path: '/purchase/:purchaseName',
 		name: 'Purchase',
 		component: () => import('../views/Purchase.vue'),
 		props: true,

@@ -89,7 +89,7 @@ export default {
 			return {
 				method: 'digistore.api.product.get_data',
 				params: {
-					product: this.productName,
+					purchase: this.purchaseName,
 				},
 				auto: true,
 			};
@@ -102,6 +102,6 @@ export default {
 			}
 		},
 	},
-	props: ['productName'],
+	props: ['purchaseName'],
 };
 </script>
