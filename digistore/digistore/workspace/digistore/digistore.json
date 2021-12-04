@@ -1,6 +1,11 @@
 {
- "charts": [],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"DigiStore\\n\\t\\t\\t\\n\\t\\t\\n\\t\\t\\t\\n\\t\\t\\n\\t\\t\\t\\n\\t\\t\",\"level\":4,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Digital Assets\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Digital Products\",\"col\":4}}]",
+ "charts": [
+  {
+   "chart_name": "Daily Store Purchase",
+   "label": "Purchases Last Month"
+  }
+ ],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"DigiStore\\n\\t\\t\\t\\n\\t\\t\\n\\t\\t\\t\\n\\t\\t\\n\\t\\t\\t\\n\\t\\t\",\"level\":2,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Digital Assets\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Digital Products\",\"col\":4}},{\"type\":\"header\",\"data\":{\"text\":\"Purchases\\n\\t\\t\\t\\n\\t\\t\\n\\t\\t\\t\\n\\t\\t\\n\\t\\t\\t\\n\\t\\t\",\"level\":4,\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Purchases Last Month\",\"col\":12}}]",
  "creation": "2021-12-01 18:24:19.602841",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -9,7 +14,7 @@
  "idx": 0,
  "label": "DigiStore",
  "links": [],
- "modified": "2021-12-01 18:29:27.953171",
+ "modified": "2021-12-04 22:44:20.242455",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "DigiStore",
