@@ -11,3 +11,14 @@ class DigitalAsset(Document):
 	@frappe.whitelist()
 	def upload_to_s3(self):
 		return upload_digital_asset_to_s3(self)
+
+	def is_purchased_by_user(self, user):
+		user_purchased_plans = frappe.get_all(
+			"Store Purchase", filters={"purchased_by": user, "paid": True,}, pluck="plan"
+		)
+
+		user_purchased_assets = frappe.get_all(
+			"Plan Assets", filters={"parent": ("in", user_purchased_plans)}, pluck="asset"
+		)
+
+		return self.name in user_purchased_assets
