@@ -1,4 +1,4 @@
-# Copyright (c) 2021, OS and Contributors
+# Copyright (c) 2021, Mohammad Hussain Nagaria and contributors
 # See license.txt
 
 # import frappe
