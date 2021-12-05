@@ -20,14 +20,18 @@ def buy(plan: str) -> str:
 
 @frappe.whitelist()
 def get_data(purchase: str) -> Dict:
-	sp = frappe.db.get_value(
+	purchase_data = {}
+
+	store_purchase = frappe.db.get_value(
 		"Store Purchase", purchase, ["purchased_by", "plan"], as_dict=True
 	)
 
-	if frappe.session.user != sp.purchased_by:
+	if frappe.session.user != store_purchase.purchased_by:
 		frappe.throw("Make sure you have purchased the product.")
 
-	asset_names = frappe.get_all("Plan Assets", filters={"parent": sp.plan}, pluck="asset")
+	asset_names = frappe.get_all(
+		"Plan Assets", filters={"parent": store_purchase.plan}, pluck="asset"
+	)
 
 	assets = frappe.get_all(
 		"Digital Asset",
@@ -35,7 +39,10 @@ def get_data(purchase: str) -> Dict:
 		fields=["s3_file_url", "file", "description", "type"],
 	)
 
-	return assets
+	purchase_data["assets"] = assets
+	purchase_data["plan"] = frappe.db.get_value("Plan", store_purchase.plan, "title")
+
+	return purchase_data
 
 
 @frappe.whitelist()

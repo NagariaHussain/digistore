@@ -13,15 +13,15 @@
 			<div class="border-t border-gray-200 px-4 py-5 sm:p-0">
 				<dl class="sm:divide-y sm:divide-gray-200">
 					<div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-						<dt class="text-sm font-medium text-gray-500">Product Id</dt>
+						<dt class="text-sm font-medium text-gray-500">Purchase Id</dt>
 						<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-							{{ productName }}
+							{{ purchaseName }}
 						</dd>
 					</div>
 					<div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
 						<dt class="text-sm font-medium text-gray-500">Plan</dt>
 						<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-							10$ (PDF + Sticker)
+							{{ data.plan }}
 						</dd>
 					</div>
 
@@ -98,7 +98,7 @@ export default {
 	computed: {
 		data() {
 			if (!this.$resources.getData.loading && this.$resources.getData.data) {
-				return { assets: this.$resources.getData.data };
+				return this.$resources.getData.data;
 			}
 		},
 	},

@@ -47,7 +47,13 @@
 							</p>
 						</div>
 						<div>
-							<router-link :to="`/purchase/${p.name}`" v-slot="{ href }">
+							<router-link
+								:to="{
+									name: 'SinglePurchase',
+									params: { purchaseName: p.name },
+								}"
+								v-slot="{ href }"
+							>
 								<a
 									:href="href"
 									class="
