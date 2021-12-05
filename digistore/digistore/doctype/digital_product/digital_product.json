@@ -29,6 +29,7 @@
    "default": "0",
    "fieldname": "available",
    "fieldtype": "Check",
+   "in_standard_filter": 1,
    "label": "Available"
   },
   {
@@ -39,6 +40,8 @@
   {
    "fieldname": "category",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Category",
    "options": "Digital Product Category"
   },
@@ -61,7 +64,7 @@
    "link_fieldname": "product"
   }
  ],
- "modified": "2021-12-05 15:23:01.144312",
+ "modified": "2021-12-05 15:26:58.904699",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "Digital Product",
