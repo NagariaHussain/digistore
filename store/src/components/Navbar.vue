@@ -2,7 +2,10 @@
 <template>
 	<Disclosure as="nav" class="bg-gray-800" v-slot="{ open }">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="flex items-center justify-between h-16">
+			<div
+				class="flex items-center justify-between h-16"
+				v-if="$auth.isLoggedIn"
+			>
 				<div class="flex items-center">
 					<div class="hidden sm:block sm:ml-6">
 						<div class="flex space-x-4">
