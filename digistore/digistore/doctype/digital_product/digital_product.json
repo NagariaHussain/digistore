@@ -49,8 +49,19 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2021-11-28 13:36:18.833590",
+ "links": [
+  {
+   "group": "General",
+   "link_doctype": "Plan",
+   "link_fieldname": "product"
+  },
+  {
+   "group": "General",
+   "link_doctype": "Store Purchase",
+   "link_fieldname": "product"
+  }
+ ],
+ "modified": "2021-12-05 15:23:01.144312",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "Digital Product",
