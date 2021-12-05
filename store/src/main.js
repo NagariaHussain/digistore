@@ -24,6 +24,16 @@ app.provide('$call', call);
 app.provide('$socket', socket);
 app.provide('$account', account);
 
+// Import Global components
+let components = import.meta.globEager('./globals/*.vue'); // To get each component inside globals folder
+
+for (let path in components) {
+	let component = components[path];
+	let name = path.replace('./globals/', '').replace('.vue', '');
+	console.log(name);
+	app.component(name, component.default || component);
+}
+
 // Configure route gaurds
 router.beforeEach(async (to, from, next) => {
 	if (to.matched.some((record) => !record.meta.isLoginPage)) {
