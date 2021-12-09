@@ -11,6 +11,7 @@ FOSS Digital Assets Marketplace. Distribute digital assets, like a pro.
 - Single-page application for smooth UX
 - Create products and add information (images, descriptions etc.)
 - And create differents tiers (plans) for the products.
+- Upload to S3
 
 > Different plans can have different prices and a set of assets that go with the plan.
 
