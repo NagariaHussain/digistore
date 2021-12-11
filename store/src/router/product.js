@@ -4,6 +4,9 @@ export default [
 		name: 'Product',
 		component: () => import('../views/Product.vue'),
 		props: true,
+		meta: {
+			isPublicPage: true,
+		},
 	},
 	{
 		path: '/success',

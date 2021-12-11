@@ -36,7 +36,21 @@ for (let path in components) {
 
 // Configure route gaurds
 router.beforeEach(async (to, from, next) => {
-	if (to.matched.some((record) => !record.meta.isLoginPage)) {
+	console.log(
+		'isLogin',
+		to,
+		to.matched.some((record) => record.meta.isLoginPage)
+	);
+	console.log(
+		'isPublic',
+		to,
+		to.matched.some((record) => record.meta.isPublicPage)
+	);
+
+	if (
+		to.matched.some((record) => !record.meta.isLoginPage) &&
+		to.matched.some((record) => !record.meta.isPublicPage)
+	) {
 		// this route requires auth, check if logged in
 		// if not, redirect to login page.
 		if (!auth.isLoggedIn) {
@@ -48,6 +62,12 @@ router.beforeEach(async (to, from, next) => {
 			next();
 		}
 	} else {
+		// Public page
+		if (to.matched.some((record) => record.meta.isPublicPage)) {
+			console.log('Visiting public page...');
+			next();
+		}
+
 		if (auth.isLoggedIn) {
 			if (!account.user) {
 				await account.fetchAccount();

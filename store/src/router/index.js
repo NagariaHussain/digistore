@@ -9,6 +9,9 @@ const routes = [
 		path: '/',
 		name: 'Home',
 		component: Home,
+		meta: {
+			isPublicPage: true,
+		},
 	},
 	...authRoutes,
 	...productRoutes,

@@ -139,6 +139,7 @@ export default {
 	components: { LoadingSpinner, CheckIcon, InformationCircleIcon },
 	name: 'Product',
 	props: ['productName'],
+	inject: ['$auth'],
 	resources: {
 		productData() {
 			return {
@@ -152,6 +153,11 @@ export default {
 		buyProduct() {
 			return {
 				method: 'digistore.api.product.buy',
+				validate() {
+					if (!this.$auth.isLoggedIn) {
+						this.$router.push({ name: 'Login' });
+					}
+				},
 				onSuccess(paymentLink) {
 					location.href = paymentLink;
 				},

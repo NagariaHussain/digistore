@@ -4,7 +4,7 @@ from typing import Dict, List
 from digistore.api.billing import create_checkout_session
 
 
-@frappe.whitelist()
+@frappe.whitelist(allow_guest=True)
 def all_products() -> List:
 	return frappe.db.get_all(
 		"Digital Product",
@@ -45,7 +45,7 @@ def get_data(purchase: str) -> Dict:
 	return purchase_data
 
 
-@frappe.whitelist()
+@frappe.whitelist(allow_guest=True)
 def get(name: str) -> Dict:
 	product_data = {}
 
