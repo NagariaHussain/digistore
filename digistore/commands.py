@@ -21,6 +21,10 @@ def start_ngrok_and_set_webhook(context):
 	print(f"{public_url} -> http://{site}:{port}")
 	print(f"Inspect logs at {tunnel.api_url}")
 
+	# Set temp ngrok tunnel url
+	frappe.db.set_value("DigiStore Settings", None, "temp_ngrok_public_url", public_url)
+	frappe.db.commit()
+
 	stripe = get_stripe()
 	url = f"{public_url}/api/method/digistore.api.billing.handle_stripe_webhook"
 	stripe.WebhookEndpoint.modify(

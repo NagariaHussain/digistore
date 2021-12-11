@@ -20,7 +20,8 @@
   "bucket_name",
   "presigned_url_expiry",
   "upload_all_digital_assets_to_s3",
-  "remove_local_asset_files_after_s3_upload"
+  "remove_local_asset_files_after_s3_upload",
+  "temp_ngrok_public_url"
  ],
  "fields": [
   {
@@ -99,12 +100,19 @@
    "fieldname": "remove_local_asset_files_after_s3_upload",
    "fieldtype": "Check",
    "label": "Remove Local Asset Files After S3 Upload"
+  },
+  {
+   "fieldname": "temp_ngrok_public_url",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Temp Ngrok Public URL",
+   "options": "URL"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2021-12-01 13:33:13.493482",
+ "modified": "2021-12-11 15:51:23.491466",
  "modified_by": "Administrator",
  "module": "Digistore",
  "name": "DigiStore Settings",

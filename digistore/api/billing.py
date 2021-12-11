@@ -15,6 +15,14 @@ def create_checkout_session(data=None):
 
 	stripe = get_stripe()
 
+	redirect_origin_url = f"https://{frappe.local.site}"
+
+	# Use ngrok tunnel URL in developer mode
+	if frappe.conf.developer_mode:
+		redirect_origin_url = frappe.db.get_single_value(
+			"DigiStore Settings", "temp_ngrok_public_url"
+		)
+
 	session = stripe.checkout.Session.create(
 		payment_method_types=["card"],
 		line_items=[
@@ -28,10 +36,8 @@ def create_checkout_session(data=None):
 			},
 		],
 		mode="payment",
-		success_url=(
-			"http://f22c-2409-4043-2011-55d5-2f09-3090-6459-c1da.ngrok.io/store/success"
-		),
-		cancel_url="http://f22c-2409-4043-2011-55d5-2f09-3090-6459-c1da.ngrok.io/store",
+		success_url=f"{redirect_origin_url}/store/success",
+		cancel_url=f"{redirect_origin_url}/store",
 	)
 
 	frappe.get_doc(
