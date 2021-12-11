@@ -2,10 +2,7 @@
 <template>
 	<Disclosure as="nav" class="bg-gray-800" v-slot="{ open }">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div
-				class="flex items-center justify-between h-16"
-				v-if="$auth.isLoggedIn"
-			>
+			<div class="flex items-center justify-between h-16">
 				<div class="flex items-center">
 					<div class="hidden sm:block sm:ml-6">
 						<div class="flex space-x-4">
@@ -50,27 +47,8 @@
 				</div>
 				<div class="hidden sm:ml-6 sm:block">
 					<div class="flex items-center">
-						<button
-							type="button"
-							class="
-								bg-gray-800
-								p-1
-								rounded-full
-								text-gray-400
-								hover:text-white
-								focus:outline-none
-								focus:ring-2
-								focus:ring-offset-2
-								focus:ring-offset-gray-800
-								focus:ring-white
-							"
-						>
-							<span class="sr-only">View notifications</span>
-							<BellIcon class="h-6 w-6" aria-hidden="true" />
-						</button>
-
 						<!-- Profile dropdown -->
-						<Menu as="div" class="ml-3 relative">
+						<Menu v-if="$auth.isLoggedIn" as="div" class="ml-3 relative">
 							<div>
 								<MenuButton
 									class="
@@ -140,6 +118,28 @@
 								</MenuItems>
 							</transition>
 						</Menu>
+
+						<div v-else>
+							<router-link
+								to="/login"
+								v-slot="{ href, route, navigate, isActive }"
+							>
+								<a
+									:href="href"
+									:class="[
+										`px-3
+										py-2
+										rounded-md
+										text-sm
+										font-medium`,
+										isActive
+											? 'bg-gray-900 text-white'
+											: 'text-gray-300 hover:bg-gray-700 hover:text-white',
+									]"
+									>Sign In</a
+								>
+							</router-link>
+						</div>
 					</div>
 				</div>
 				<div class="-mr-2 flex sm:hidden">
@@ -183,7 +183,7 @@
 					>Dashboard</DisclosureButton
 				>
 			</div>
-			<div class="pt-4 pb-3 border-t border-gray-700">
+			<div v-if="$auth.isLoggedIn" class="pt-4 pb-3 border-t border-gray-700">
 				<div class="flex items-center px-5">
 					<div class="flex-shrink-0">
 						<img
