@@ -1,11 +1,4 @@
-import UserProducts from '../views/UserProducts.vue';
-
 export default [
-	{
-		path: '/purchases',
-		name: 'Purchases',
-		component: UserProducts,
-	},
 	{
 		path: '/products/:productName',
 		name: 'Product',
@@ -16,11 +9,5 @@ export default [
 		path: '/success',
 		name: 'Success',
 		component: () => import('../views/Success.vue'),
-	},
-	{
-		path: '/purchases/:purchaseName',
-		name: 'SinglePurchase',
-		component: () => import('../views/Purchase.vue'),
-		props: true,
 	},
 ];

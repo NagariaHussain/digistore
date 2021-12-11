@@ -17,7 +17,7 @@
 							</p>
 							<p class="mt-3 text-sm md:mt-0 md:ml-6">
 								<router-link
-									:to="`/purchase/${productData.has_user_purchased}`"
+									:to="`/purchases/${productData.has_user_purchased}`"
 									v-slot="{ href }"
 								>
 									<a

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import authRoutes from './auth';
 import productRoutes from './product';
+import purchaseRoutes from './purchase';
 
 const routes = [
 	{
@@ -11,6 +12,7 @@ const routes = [
 	},
 	...authRoutes,
 	...productRoutes,
+	...purchaseRoutes,
 ];
 
 const router = createRouter({
