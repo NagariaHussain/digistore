@@ -8,12 +8,11 @@ import mimetypes
 
 
 from os import PathLike
-from typing_extensions import Self
 from frappe.utils.password import get_decrypted_password
 
 
 class S3Client:
-	def __init__(self, bucket_name: str, region: str = None) -> Self:
+	def __init__(self, bucket_name: str, region: str = None):
 		access_key_id = None
 		secret_access_key = None
 
