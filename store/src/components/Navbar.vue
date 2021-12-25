@@ -185,7 +185,7 @@
 			</div>
 			<div v-if="$auth.isLoggedIn" class="pt-4 pb-3 border-t border-gray-700">
 				<div class="flex items-center px-5">
-					<div class="flex-shrink-0">
+					<div class="shrink-0">
 						<img
 							class="h-10 w-10 rounded-full"
 							src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
@@ -200,7 +200,7 @@
 						type="button"
 						class="
 							ml-auto
-							flex-shrink-0
+							shrink-0
 							bg-gray-800
 							p-1
 							rounded-full

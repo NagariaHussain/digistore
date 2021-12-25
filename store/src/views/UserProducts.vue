@@ -17,7 +17,7 @@
 						Your Products
 					</h3>
 				</div>
-				<div class="ml-4 mt-2 flex-shrink-0"></div>
+				<div class="ml-4 mt-2 shrink-0"></div>
 			</div>
 		</div>
 
@@ -31,7 +31,7 @@
 					class="py-4"
 				>
 					<div class="flex items-center space-x-4">
-						<div class="flex-shrink-0">
+						<div class="shrink-0">
 							<img
 								class="h-8 w-8 rounded-full"
 								:src="p.product.image"

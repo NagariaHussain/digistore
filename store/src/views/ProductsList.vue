@@ -18,7 +18,7 @@
 						All Products
 					</h3>
 				</div>
-				<div class="ml-4 mt-2 flex-shrink-0"></div>
+				<div class="ml-4 mt-2 shrink-0"></div>
 			</div>
 		</div>
 
@@ -41,7 +41,7 @@
 				v-for="product in $resources.allProducts.data"
 				:key="product.name"
 			>
-				<div class="flex-shrink-0">
+				<div class="shrink-0">
 					<img class="h-48 w-full object-cover" :src="product.image" alt="" />
 				</div>
 				<div class="flex-1 bg-white p-6 flex flex-col justify-between">

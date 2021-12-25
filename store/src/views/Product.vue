@@ -5,7 +5,7 @@
 			<div v-if="productData.has_user_purchased" class="px-4 mt-5 max-w-5xl">
 				<div class="rounded-md bg-blue-50 p-4">
 					<div class="flex">
-						<div class="flex-shrink-0">
+						<div class="shrink-0">
 							<InformationCircleIcon
 								class="h-5 w-5 text-blue-400"
 								aria-hidden="true"
@@ -118,7 +118,7 @@
 										class="flex space-x-3"
 									>
 										<CheckIcon
-											class="flex-shrink-0 h-5 w-5 text-green-500"
+											class="shrink-0 h-5 w-5 text-green-500"
 											aria-hidden="true"
 										/>
 										<span class="text-sm text-gray-500">{{ feature }}</span>

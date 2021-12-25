@@ -5,7 +5,6 @@
 			class="
 				inline-flex
 				items-center
-				bg-indigo-500
 				px-4
 				py-2
 				border border-transparent
@@ -14,10 +13,10 @@
 				font-medium
 				rounded-md
 				text-white
-				bg-rose-600
-				hover:bg-rose-500
-				focus:border-rose-700
-				active:bg-rose-700
+				bg-emerald-500
+				hover:bg-emerald-500
+				focus:border-emerald-700
+				active:bg-emerald-700
 				transition
 				ease-in-out
 				duration-150
