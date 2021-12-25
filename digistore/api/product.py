@@ -54,6 +54,9 @@ def get(name: str) -> Dict:
 		"Plan", filters={"product": name}, fields=["name", "price", "currency", "title"]
 	)
 
+	# Transform description Markdown to HTML
+	product_doc.description = frappe.utils.markdown(product_doc.description)
+
 	product_data["product_doc"] = product_doc
 	product_data["product_plans"] = product_plans
 

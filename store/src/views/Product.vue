@@ -41,6 +41,8 @@
 					{{ productData.product_doc.title }}
 				</h1>
 				<p>{{ productData.product_doc.short_description }}</p>
+
+				<div v-html="productData.product_doc.description"></div>
 			</div>
 
 			<div v-if="!productData.has_user_purchased">
